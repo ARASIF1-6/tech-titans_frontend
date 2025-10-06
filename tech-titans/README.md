@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tech Titans E-commerce 🛍️
 
-## Getting Started
+> A modern full-stack e-commerce platform built with Next.js, featuring secure authentication and integrated payments.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
+
+## ✨ Key Features
+
+- 🔐 **Secure Authentication**
+  - JWT token-based auth
+  - Social login integration
+  - Role-based access control
+
+- 🛍️ **Shopping Experience** 
+  - Product search & filtering
+  - Cart management with Zustand
+  - Secure Stripe checkout
+  
+- 📱 **Modern UI/UX**
+  - Responsive design
+  - Dark/Light themes
+  - Loading states
+  - Toast notifications
+
+## 🚀 Quick Start
 
 ```bash
+# Clone repository
+git clone https://github.com/ARASIF1-6/tech-titans_frontend.git
+
+# Install dependencies
+cd tech-titans
+npm install
+
+# Setup environment variables
+cp .env.example .env.local
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Category | Technologies |
+|----------|-------------|
+| Frontend | Next.js 14, React, TypeScript |
+| Styling | Tailwind CSS, Shadcn UI |
+| State | Zustand |
+| Forms | React Hook Form, Zod |
+| Payments | Stripe |
+| Authentication | NextAuth.js, JWT |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+tech-titans/
+├── src/
+│   ├── app/              # Next.js app router
+│   ├── components/       # Reusable components
+│   ├── lib/             # Utilities & configs
+│   └── store/           # Zustand stores
+├── public/              # Static assets
+└── tests/              # Test suites
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🔑 Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+NEXT_PUBLIC_API_URL=
+STRIPE_SECRET_KEY=
+NEXTAUTH_SECRET=
+```
 
-## Deploy on Vercel
+## 👥 User Roles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Customer
+- Browse products
+- Manage cart & wishlist
+- Place orders
+- Track deliveries
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Seller
+- Manage products
+- Process orders
+- View analytics
+
+### Admin
+- User management
+- System settings
+- Monitor platform
+
+## 💻 Development
+
+```bash
+# Run tests
+npm test
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
